@@ -1,0 +1,85 @@
+/* ==========================================================================
+   LOREAL VOYAGE - TABLET APP . by @hogox
+   ========================================================================== */
+
+/* ========= IMPORT ======== */
+
+
+/* ========= FUENTES ======== */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,600);
+
+/* ========= ESTILOS GENERALES ======== */
+html { /*min-height:100%;*/
+	-webkit-font-smoothing:antialiased;
+}
+
+body {
+	font: normal 0.75em/1em 'Open Sans', Helvetica, Arial, sans-serif;
+	background: #3b3b3b;
+	color:#fff;
+}
+
+a { color:#ce0f57; text-decoration:none; }
+
+a:hover { color:#f3005c; text-decoration:none; }
+
+p {
+	font: normal 14px/20px Helvetica, Arial, sans-serif;
+	margin:7px 0; 
+}
+
+/* ========= HEADINGS ======== */
+h1, h2, h3, h4, h5, h6 { font-family:'URWWoodTypD', Serif; font-weight:400; }
+
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:#fff;
+    text-transform:uppercase;
+    font:700 16px/22px 'BebasNeue', sans-serif;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:#fff;
+    text-transform:uppercase;
+    font:700 16px/22px 'BebasNeue', sans-serif;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:#fff;
+    text-transform:uppercase;
+    font:700 16px/22px 'BebasNeue', sans-serif;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:#fff;
+    text-transform:uppercase;
+    font:700 16px/22px 'BebasNeue', sans-serif;
+}
+
+/* ========= CONTENEDORES ======== */
+
+.container {
+	margin: 0;
+	width: 1280px;
+	height: 100%;
+
+}
+
+aside { float: left; width: 165px; height: 800px; overflow: hidden; background: url(../img/sidebar-bg.jpg) 0 0 no-repeat; }
+
+
+
+
+/* ========= HEADER ======== */
+
+
+
+
+
+
+
+
+
