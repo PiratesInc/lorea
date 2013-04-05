@@ -1,19 +1,32 @@
 
+<script type="text/javascript">
+    $(window).load(function() {
+    // The slider being synced must be initialized first
+        $('#carousel').flexslider({
+        animation: "slide",
+        controlNav: false,
+        animationLoop: false,
+        slideshow: false,
+        itemMargin: 5,
+        asNavFor: '#slider'
+        });
+
+        $('#slider').flexslider({
+        animation: "slide",
+        controlNav: false,
+        animationLoop: false,
+        slideshow: false,
+        sync: "#carousel"
+        });
+    });
+</script>
+
 <!-- Place somewhere in the <body> of your page -->
 <div id="slider" class="flexslider">
   <ul class="slides">
-    <li>
-      <iframe id="player_1" src="http://player.vimeo.com/video/39683393?api=1&player_id=player_1" width="500" height="280" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-    </li>
-    <li>
-      <iframe id="player_1" src="http://player.vimeo.com/video/39683393?api=1&player_id=player_1" width="500" height="280" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-    </li>
-    <li>
-      <iframe id="player_1" src="http://player.vimeo.com/video/39683393?api=1&player_id=player_1" width="500" height="280" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-    </li>
-    <li>
-      <iframe id="player_1" src="http://player.vimeo.com/video/39683393?api=1&player_id=player_1" width="500" height="280" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-    </li>
+    <li><div class="video-wrapper">video 1</div></li>
+    <li><div class="video-wrapper">video 2</div></li>
+    <li><div class="video-wrapper">video 3</div></li>
     <!-- items mirrored twice, total of 12 -->
   </ul>
 </div>
@@ -21,20 +34,17 @@
     <ul class="slides">
         <li class="access">
             <a href="#">
-                <h2>ACCESS</h2>
-                <p>Search all scientific research articles and journals.. if it's on Open access, it's on rock your paper.</p>
+                <h2>THUMB 1</h2>
             </a>
         </li>
         <li class="collaborate">
             <a href="#">
-                <h2>COLLABORATE</h2>
-                <p>Meet your peers, review, discuss or rate an article of your interest.</p>
+                <h2>THUMB 2</h2>
             </a>
         </li>
         <li class="share flex-active-slide">
             <a href="#">
-                <h2>SHARE</h2>
-                <p>Publish your research work with us. Get a strong peer review and a great visibility.</p>
+                <h2>THUMB 3</h2>
             </a>
         </li>
     </ul>

@@ -8,41 +8,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 
 
-        <link rel="stylesheet" href="../css/bootstrap.min.css">
-        <link rel="stylesheet" href="../css/flexslider.css">
-        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/flexslider.css">
+        <link rel="stylesheet" href="css/main.css">
         
 
-        <script src="../js/vendor/jquery-1.9.1.min.js"></script>
-        <script src="../js/vendor/bootstrap.js"></script>
+        <script src="js/vendor/jquery-1.9.1.min.js"></script>
+        <script src="js/vendor/bootstrap.js"></script>
         <!-- FlexSlider -->
-		<script src="../js/vendor/jquery.flexslider.js"></script>
-        <script src="../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-		
-		
-
-		<script type="text/javascript">
-			$(window).load(function() {
-			// The slider being synced must be initialized first
-				$('#carousel').flexslider({
-				animation: "slide",
-				controlNav: false,
-				animationLoop: false,
-				slideshow: false,
-				itemWidth: 233,
-				itemMargin: 5,
-				asNavFor: '#slider'
-				});
-
-				$('#slider').flexslider({
-				animation: "slide",
-				controlNav: false,
-				animationLoop: false,
-				slideshow: false,
-				sync: "#carousel"
-				});
-			});
-		</script>
+		<script src="js/vendor/jquery.flexslider.js"></script>
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
     </head>
     <body>

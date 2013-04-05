@@ -95,9 +95,17 @@ aside { float: left; width: 150px; height: 600px; background: url(../img/sidebar
 
 /* =========  FLEXSLIDER - TABS NAV ======== */
 
-#slider .slides li { width:800px; height:400px; }
+#slider { width:800px; height:400px; background:rgba(0, 0, 0, 0.6); margin-bottom:10px;}
+	#slider ul.slides { height:400px; }
+		#slider ul.slides li { width:800px; height:400px; display:block; }
 
-#carousel { background: rgba(0,0,0,0.3); }
+#carousel { width:800px; }
+	#carousel ul.slides { height:100px; }
+		#carousel ul.slides li { 
+			width:230px !important; height: 100px; margin:0 10px;
+			float:left; display: block;
+			background:rgba(0, 0, 0, 0.3);
+		}
 
-#carousel .slides li { width: 100px; height: 100px; float:left; display: block; background: rgba(0,0,0,0.6); }
+
 
