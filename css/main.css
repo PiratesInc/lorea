@@ -29,34 +29,34 @@ p {
 }
 
 /* ========= HEADINGS ======== */
-h1, h2, h3, h4, h5, h6 { font-family: 'Droid Sans', Helvetica, Arial, sans-serif; font-weight:700; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Droid Sans', Helvetica, Arial, sans-serif; font-weight:700; margin: 3px 0; padding: 0; }
 
-h1 {}
-h2 {}
-h3 {}
-h4 {}
-h5 {}
-h6 {}
+h1 { font-size: 2em; line-height: 1.2em; }
+h2 { font-size: 1.8em; line-height: 1.2em; }
+h3 { font-size: 1.6em; line-height: 1.2em; }
+h4 { font-size: 1.4em; line-height: 1.2em; }
+h5 { font-size: 1.2em; line-height: 1.2em; }
+h6 { font-size: 1.1em; line-height: 1.2em; }
 
 ::-webkit-input-placeholder { /* WebKit browsers */
     color:#fff;
     text-transform:uppercase;
-    font:700 16px/22px 'BebasNeue', sans-serif;
+    font:700 16px/22px 'Droid Sans', sans-serif;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
     color:#fff;
     text-transform:uppercase;
-    font:700 16px/22px 'BebasNeue', sans-serif;
+    font:700 16px/22px 'Droid Sans', sans-serif;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
     color:#fff;
     text-transform:uppercase;
-    font:700 16px/22px 'BebasNeue', sans-serif;
+    font:700 16px/22px 'Droid Sans', sans-serif;
 }
 :-ms-input-placeholder { /* Internet Explorer 10+ */
     color:#fff;
     text-transform:uppercase;
-    font:700 16px/22px 'BebasNeue', sans-serif;
+    font:700 16px/22px 'Droid Sans', sans-serif;
 }
 
 /* ========= CONTENEDORES ======== */
@@ -69,7 +69,7 @@ h6 {}
 
 /* ========= SIDEBAR / NAV PRINCIPAL ======== */
 
-aside { float: left; width: 150px; height: 600px; background: url(../img/sidebar-bg.jpg) center bottom no-repeat; }
+aside { float: left; width: 150px; height: 552px; background: url(../img/sidebar-bg.jpg) center bottom no-repeat; position: relative; z-index: 1000; }
 	aside ul { margin: 0; }
 	aside ul li.menu { list-style: none; padding: 0; text-align: right; padding: 0 0 1px; width: 150px; height: 44px; background: url(../img/nav-li-bg.png) right center no-repeat;  }
 	aside ul li.menu a { color: #fff; font: normal 1.167em/44px 'Droid Sans', Helvetica, Arial, sans-serif; display: block; padding: 0 15px 0 5px; }
@@ -91,21 +91,60 @@ aside { float: left; width: 150px; height: 600px; background: url(../img/sidebar
 
 /* =========  CONTENIDO ======== */
 
-.main { height: 600px; width: 874px; position: relative; }
+.main { height: 552px; width: 874px; position: relative; overflow: hidden; }
 
 /* =========  FLEXSLIDER - TABS NAV ======== */
 
-#slider { width:800px; height:400px; background:rgba(0, 0, 0, 0.6); margin-bottom:10px;}
-	#slider ul.slides { height:400px; }
-		#slider ul.slides li { width:800px; height:400px; display:block; }
+.slider-container { width:874px; height:400px; background:rgba(0, 0, 0, 0.6);}
+	.slider-container ul.slides { height:400px; }
+		.slider-container ul.slides > li { width:874px; height:400px; padding: 25px 0; display:block; overflow-y: scroll; }
 
-#carousel { width:800px; }
-	#carousel ul.slides { height:100px; }
-		#carousel ul.slides li { 
-			width:230px !important; height: 100px; margin:0 10px;
+.carousel-container { width:874px; background: rgba(0,0,0,0.4); padding: 10px 0; }
+	.carousel-container ul.slides { height:100px; }
+		.carousel-container ul.slides li { 
+			width:100px !important; height: 100px; margin:0 10px;
 			float:left; display: block;
 			background:rgba(0, 0, 0, 0.3);
 		}
+		.carousel-container ul.slides li a { display: block; width: 100%; height: 100%; }
+
+/* =========  ITINERARIO ======== */
+
+ul.calendario { padding: 0 50px; margin: 0; }
+	ul.calendario li { list-style: none; clear: both; padding: 10px 0; border-bottom: 1px dashed #ccc; overflow: hidden; }
+		ul.calendario li span.hora {
+			display: block; float: left;
+			background: rgba(255,255,255,0.8); color: #424242;
+			height: 36px; padding: 0 25px; margin-right: 15px;
+			font: normal 1.167em/36px 'Droid Sans'; 
+			}
+		ul.calendario li .actividad {
+			float: left;
+			width: 630px;
+		}
+			ul.calendario li .actividad h3 { color: #d10000; }
+			ul.calendario li .actividad p { }
+		ul.calendario li .check { float: right; }
+		
 
 
+/* =========  Player ======== */
+
+.player {
+	height: 40px;
+	width: 874px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background: url(../img/player-bg.png) 0 0 repeat;
+}
+	.player h1 {
+		padding: 0 25px;
+		height: 40px;
+		font: normal 1.167em/40px 'Droid Sans';
+		background: rgba(17,17,17,0.6);
+		float: left;
+		margin: 0;
+		color: #9e9267;
+	}
 

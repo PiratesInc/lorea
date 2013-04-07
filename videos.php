@@ -22,7 +22,7 @@
 </script>
 
 <!-- Place somewhere in the <body> of your page -->
-<div id="slider" class="flexslider">
+<div id="slider" class="flexslider slider-container">
   <ul class="slides">
     <li><div class="video-wrapper">video 1</div></li>
     <li><div class="video-wrapper">video 2</div></li>
@@ -30,7 +30,7 @@
     <!-- items mirrored twice, total of 12 -->
   </ul>
 </div>
-<div id="carousel" class="flexslider">
+<div id="carousel" class="flexslider carousel-container">
     <ul class="slides">
         <li class="access">
             <a href="#">

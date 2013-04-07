@@ -34,10 +34,17 @@
 			<div class="tab-pane" id="lF">
 				<?php include 'videos.php'; ?>
 			</div>
+			
+			<div class="player">
+				<h1>Reproductor de música</h1>
+			</div>
+
 
 		</div>
 
 	</div><!-- fin tabbable -->
+		
+	
 </div><!-- fin container -->
 
 <?php include 'includes/footer.php'; ?>
