@@ -1,1 +1,0 @@
-<img src="img/landing.jpg" alt="Loreal Voyage" />
