@@ -14,7 +14,7 @@ html { /*min-height:100%;*/
 }
 
 body {
-	font: normal 0.75em/1em 'Droid Sans', Helvetica, Arial, sans-serif;
+	font: normal 0.750em/0.917em 'Droid Sans', Helvetica, Arial, sans-serif;
 	background: #3b3b3b;
 	color:#fff;
 }
@@ -24,19 +24,19 @@ a { color:#b41010; text-decoration:none; cursor: pointer; }
 a:hover { color:#890909; text-decoration:none; }
 
 p {
-	font: normal 14px/20px 'Droid Sans', Helvetica, Arial, sans-serif;
+	font: normal 1.083em/1.333em 'Droid Sans', Helvetica, Arial, sans-serif;
 	margin:7px 0;
 }
 
 /* ========= HEADINGS ======== */
-h1, h2, h3, h4, h5, h6 { font-family: 'Droid Sans', Helvetica, Arial, sans-serif; font-weight:700; margin: 3px 0; padding: 0; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Droid Sans', Helvetica, Arial, sans-serif; font-weight:400; margin: 3px 0; padding: 0; }
 
-h1 { font-size: 2em; line-height: 1.2em; }
-h2 { font-size: 1.8em; line-height: 1.2em; }
-h3 { font-size: 1.6em; line-height: 1.2em; }
-h4 { font-size: 1.4em; line-height: 1.2em; }
-h5 { font-size: 1.2em; line-height: 1.2em; }
-h6 { font-size: 1.1em; line-height: 1.2em; }
+h1 { font-size: 1.875em; line-height: 1.333em; }
+h2 { font-size: 1.667em; line-height: 1.250em; }
+h3 { font-size: 1.500em; line-height: 1.250em; }
+h4 { font-size: 1.333em; line-height: 1.250em; }
+h5 { font-size: 1.250em; line-height: 1.250em; }
+h6 { font-size: 1.167em; line-height: 1.250em; }
 
 ::-webkit-input-placeholder { /* WebKit browsers */
     color:#fff;
@@ -91,7 +91,9 @@ aside { float: left; width: 150px; height: 552px; background: url(../img/sidebar
 
 /* =========  CONTENIDO ======== */
 
-.main { height: 552px; width: 874px; position: relative; overflow: hidden; }
+.main { height: 552px; width: 874px; position: relative; overflow: hidden; background:url(../img/container-bg.png) no-repeat center; }
+
+.tab-pane.margin .slider-container, .tab-pane.margin .carousel-container { padding-left:44px; width:830px; }
 
 	.tab-pane.home {}
 	.tab-pane.itinerario {}
@@ -105,14 +107,14 @@ aside { float: left; width: 150px; height: 552px; background: url(../img/sidebar
 
 .slider-container { width:874px; height:400px; }
 	.slider-container ul.slides { height:400px; }
-		.slider-container ul.slides > li { width:874px; height:450px; padding: 0; display:block; overflow-y: scroll; }
+		.slider-container ul.slides > li { width:874px; height:397px; padding: 0; display:block; overflow-y: scroll; }
 
-.carousel-container { width:874px; background: url(../img/carousel-bg.png) 0 0 repeat; padding: 10px 0; }
+.carousel-container { width:874px; background: url(../img/carousel-bg.png) 0 0 repeat; padding: 15px 0; height:125px; }
 	.carousel-container ul.slides { height:100px; }
 		.carousel-container ul.slides li { 
 			width:100px !important; height: 100px; margin:0;
-			float:left; display: block;
-			background:rgba(0, 0, 0, 0.3);
+			float:left; display: block; text-align:center;
+			/*background:rgba(0, 0, 0, 0.3);*/
 		}
 		.carousel-container ul.slides li a { display: block; width: 100%; height: 100%; }
 
@@ -128,6 +130,13 @@ aside { float: left; width: 150px; height: 552px; background: url(../img/sidebar
 	
 
 /* =========  ITINERARIO ======== */
+#carousel-itinerario .flex-viewport { width:800px; }
+#carousel-itinerario ul.slides li { 
+	width:100px !important; height:100px; background:#ebebee; border:3px solid #fff; margin:0 12px; 
+}
+	#carousel-itinerario ul.slides li a { color:#222; }
+		#carousel-itinerario ul.slides li a h1 { font-size:46px; margin-top:11px; }
+		#carousel-itinerario ul.slides li a span { font-size:14px; }
 
 ul.calendario { padding: 0 50px; margin: 0; }
 	ul.calendario li { list-style: none; clear: both; padding: 10px 0; border-bottom: 1px dashed #ccc; overflow: hidden; }
@@ -138,12 +147,12 @@ ul.calendario { padding: 0 50px; margin: 0; }
 			font: normal 1.167em/36px 'Droid Sans'; 
 			}
 		ul.calendario li .actividad {
-			float: left;
-			width: 630px;
+			float:left;
+			width:590px;
 		}
-			ul.calendario li .actividad h3 { color: #d10000; }
-			ul.calendario li .actividad p { }
-		ul.calendario li .check { float: right; }
+			ul.calendario li .actividad h3 {  }
+			ul.calendario li .actividad p {   }
+		ul.calendario li .check { float: right; width:20px; height:20px; }
 
 
 /* =========  TABS SUB NAV ======== */
@@ -170,7 +179,7 @@ ul.calendario { padding: 0 50px; margin: 0; }
 		.revitalift .nav-tabs li.active { }	
 			.revitalift .nav-tabs li.active a { background: #be0000 url(../img/sub-nav-on.png) 0 0 repeat; color: #fff; }	
 
-.tabbable.revitalift .tab-content { padding-top: 25px; }
+.tabbable.revitalift .tab-content { padding-top: 55px; }
 
 
 .nav-tabs > li > a:hover,
@@ -184,8 +193,25 @@ ul.calendario { padding: 0 50px; margin: 0; }
 
 /* =========  REVITALIFT x3 ======== */
 
+#inicio1 > img { position: absolute; bottom:0; }
+#carousel-revitalift ul.slides {}
+#carousel-revitalift ul.slides li { 
+	width:140px !important; height:40px; padding-top:85px; margin:0 10px; 
+	background-position:top center;
+	background-repeat: no-repeat;
+}
+	#carousel-revitalift ul.slides li a { color:#fff; }
+		#carousel-revitalift ul.slides li a h2 { font-size:1.083em; }
+		#carousel-revitalift ul.slides li a h2 strong { display:block; }
 		
+#carousel-revitalift ul.slides li.tab1 { background-image:url(../img/revitalift-tab1.png); }
+#carousel-revitalift ul.slides li.tab2 { background-image:url(../img/revitalift-tab2.png); }
+#carousel-revitalift ul.slides li.tab3 { background-image:url(../img/revitalift-tab3.png); }
+#carousel-revitalift ul.slides li.tab4 { background-image:url(../img/revitalift-tab4.png); }
+#carousel-revitalift ul.slides li.tab5 { background-image:url(../img/revitalift-tab5.png); }
 
+.texto.pull-left { width:51%; }
+.imagen.pull-right { position:absolute; right:0; top:0; width:35%; }
 
 /* =========  Player ======== */
 
