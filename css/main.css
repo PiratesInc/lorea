@@ -228,7 +228,9 @@ ul.calendario { padding: 0 50px; margin: 0; }
 	#carousel-expertos ul.slides li a { }
 		#carousel-expertos ul.slides li a img { width:100%; height:100%; }
 
-#slider-expertos ul.slides li { padding:30px 70px 30px 20px; height:auto; }
+#slider-expertos .flex-viewport {  }
+#slider-expertos ul.slides li { height:auto; }
+#slider-expertos ul.slides li div.info { padding:50px 80px 40px 50px; }
 	#slider-expertos ul.slides li h2 { font-size:2.333em; }
 		#slider-expertos ul.slides li h2 span { display:block; font-weight:700; }
 	#slider-expertos ul.slides li h3 { }
