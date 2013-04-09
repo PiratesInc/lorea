@@ -151,7 +151,7 @@ aside { float: left; width: 150px; height: 552px; background: url(../img/sidebar
 #carousel-itinerario ul.slides li.flex-active-slide { background:url(../img/itinerario_active.png) center; color:#FFF; }	
 	#carousel-itinerario ul.slides li.flex-active-slide a { color:#FFF; }
 
-ul.calendario { padding: 0 50px; margin: 0; }
+ul.calendario { padding: 0 50px; margin: 0 0 60px; }
 	ul.calendario li { list-style: none; clear: both; padding: 10px 0; border-bottom: 1px dashed #ccc; overflow: hidden; }
 		ul.calendario li span.hora {
 			display: block; float: left;
