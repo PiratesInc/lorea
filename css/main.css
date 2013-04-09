@@ -257,3 +257,5 @@ ul.calendario { padding: 0 50px; margin: 0; }
 		color: #9e9267;
 	}
 
+.flex-active-slide { background:red !important; }	
+
