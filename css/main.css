@@ -139,13 +139,17 @@ aside { float: left; width: 150px; height: 552px; background: url(../img/sidebar
 	
 
 /* =========  ITINERARIO ======== */
+
 #carousel-itinerario .flex-viewport { width:800px; }
 #carousel-itinerario ul.slides li { 
 	width:100px !important; height:100px; background:#ebebee; border:3px solid #fff; margin:0 12px; 
 }
 	#carousel-itinerario ul.slides li a { color:#222; }
-		#carousel-itinerario ul.slides li a h1 { font-size:46px; margin-top:11px; }
-		#carousel-itinerario ul.slides li a span { font-size:14px; }
+		#carousel-itinerario ul.slides li a h1 { font-size:46px; margin-top:11px; font-weight:700; }
+		#carousel-itinerario ul.slides li a span { font-size:14px; font-weight:400; }
+
+#carousel-itinerario ul.slides li.flex-active-slide { background:url(../img/itinerario_active.png) center; color:#FFF; }	
+	#carousel-itinerario ul.slides li.flex-active-slide a { color:#FFF; }
 
 ul.calendario { padding: 0 50px; margin: 0; }
 	ul.calendario li { list-style: none; clear: both; padding: 10px 0; border-bottom: 1px dashed #ccc; overflow: hidden; }
@@ -177,6 +181,9 @@ ul.calendario { padding: 0 50px; margin: 0; }
 #carousel-imperdibles ul.slides li.tab5 {}
 
 	#carousel-imperdibles ul.slides li a { vertical-align:middle; display:table-cell; }
+
+#carousel-imperdibles ul.slides li.flex-active-slide { background:#FFF;  }	
+	#carousel-imperdibles ul.slides li.flex-active-slide a { color:#444; }
 
 
 /* =========  TABS SUB NAV ======== */
@@ -236,6 +243,9 @@ ul.calendario { padding: 0 50px; margin: 0; }
 #carousel-revitalift ul.slides li.tab4 { background-image:url(../img/revitalift-tab4.png); }
 #carousel-revitalift ul.slides li.tab5 { background-image:url(../img/revitalift-tab5.png); }
 
+#carousel-revitalift ul.slides li.flex-active-slide { background-color:rgba(255, 255, 255, 0.1); }	
+	#carousel-revitalift ul.slides li.flex-active-slide a { color:#d50008; }
+
 .texto.pull-right, .texto.pull-left { max-width:55%; }
 .slides img.entrevista { position: absolute; left: 528px; top: 0px; width: 302px; z-index: 9999;}
 
@@ -246,14 +256,17 @@ img.pull-left { max-width:40%; }
 /* =========  Expertos ======== */
 #carousel-expertos .flex-viewport { width:440px; margin-left:190px; }
 #carousel-expertos ul.slides li { 
-	width:100px !important; height:100px; background:#ebebee; border:3px solid #fff; margin:0 15px; 
+	width:100px !important; height:100px; background:#000; border:3px solid rgba(255, 255, 255, 0.77); margin:0 15px; 
 }
 	#carousel-expertos ul.slides li a { }
-		#carousel-expertos ul.slides li a img { width:100%; height:100%; }
+		#carousel-expertos ul.slides li a img { width:100%; height:100%; opacity:.77; }
+
+#carousel-expertos ul.slides li.flex-active-slide { border-color:#fff; }	
+	#carousel-expertos ul.slides li.flex-active-slide a img { opacity:1; }
 
 #slider-expertos .flex-viewport {  }
-#slider-expertos ul.slides li { height:auto; }
-#slider-expertos ul.slides li div.info { padding:50px 80px 40px 50px; }
+#slider-expertos ul.slides li { }
+#slider-expertos ul.slides li div.info { padding: 40px 140px 60px 120px; }
 	#slider-expertos ul.slides li h2 { font-size:2.333em; }
 		#slider-expertos ul.slides li h2 span { display:block; font-weight:700; }
 	#slider-expertos ul.slides li h3 { }
@@ -265,12 +278,16 @@ img.pull-left { max-width:40%; }
 #video-carousel { height:106px; }
 #video-carousel .flex-viewport { margin-left:200px; width:410px; }
 #video-carousel ul.slides li { 
-	width:100px !important; height:100px; background:#ebebee; border:3px solid #fff; margin:0 15px; 
+	opacity:.77;
+	width:100px !important; height:100px; background:#000; border:3px solid rgba(255, 255, 255, 0.77); margin:0 15px; 
 }
 #video-carousel ul.slides li h2 { font-size:15px; }
-#video-carousel ul.slides li.tab1 { background:url(../img/video_01_tab.png) no-repeat top; }
-#video-carousel ul.slides li.tab2 { background:url(../img/video_02_tab.png) no-repeat top; }
-#video-carousel ul.slides li.tab3 { background:url(../img/video_03_tab.png) no-repeat top; }
+#video-carousel ul.slides li.tab1 { background:url(../img/video_01_tab.png) no-repeat bottom; }
+#video-carousel ul.slides li.tab2 { background:url(../img/video_02_tab.png) no-repeat bottom; }
+#video-carousel ul.slides li.tab3 { background:url(../img/video_03_tab.png) no-repeat bottom; }
+
+#video-carousel ul.slides li.flex-active-slide { border-color:#fff; opacity:1; }	
+	#video-carousel ul.slides li.tab1.flex-active-slide{ background-position: bottom; }
 
 #video-slider .flex-viewport { width:700px; margin-left:70px; }
 
@@ -295,5 +312,5 @@ img.pull-left { max-width:40%; }
 		color: #9e9267;
 	}
 
-.carousel-container .flex-active-slide { outline:1px dashed red !important; }	
+
 
