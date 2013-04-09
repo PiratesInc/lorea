@@ -19,13 +19,6 @@
 		<script src="js/vendor/jquery.flexslider.js"></script>
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
         
-        <style>
-        .flex2
-        {
-	        border: 1px solid red;
-	        width: 300px;
-        }
-        </style>
 
     </head>
     <body>
@@ -83,18 +76,14 @@
 						        animationLoop: false,
 						        slideshow: false,
 						        sync: "#carousel-itinerario",
-						        before: function(slider) {
+						        after: function(slider) {
 						        	
 						        	var current = slider.currentSlide + 1;
 							       
-							        $(".dia" + last_current).removeClass("flex2");
-							        $(".dia" + current).addClass("flex2");
+							        $("#carousel-itinerario .tab" + last_current).removeClass("flex-active-slide");
+							        $("#carousel-itinerario .tab" + current).addClass("flex-active-slide");
 							        
 							        last_current = current;
-							        
-							       
-							       
-							        
 							       }
 						        });
 						    });
@@ -102,12 +91,12 @@
 
 						<div id="carousel-itinerario" class="flexslider carousel-container">
 						    <ul class="slides">
-						        <li class="dia1 flex2"><a href="#"><h1>13</h1><span>sábado</span></a></li>
-						        <li class="dia2"><a href="#"><h1>14</h1><span>domingo</span></a></li>
-						        <li class="dia3"><a href="#"><h1>15</h1><span>lunes</span></a></li>
-						        <li class="dia4"><a href="#"><h1>16</h1><span>martes</span></a></li>
-						        <li class="dia5"><a href="#"><h1>17</h1><span>miércoles</span></a></li>
-						        <li class="dia6"><a href="#"><h1>18</h1><span>jueves</span></a></li>
+						        <li class="tab1 flex-active-slide"><a href="#"><h1>13</h1><span>sábado</span></a></li>
+						        <li class="tab2"><a href="#"><h1>14</h1><span>domingo</span></a></li>
+						        <li class="tab3"><a href="#"><h1>15</h1><span>lunes</span></a></li>
+						        <li class="tab4"><a href="#"><h1>16</h1><span>martes</span></a></li>
+						        <li class="tab5"><a href="#"><h1>17</h1><span>miércoles</span></a></li>
+						        <li class="tab6"><a href="#"><h1>18</h1><span>jueves</span></a></li>
 						    </ul>
 						</div>
 
@@ -563,6 +552,9 @@
 <!-- ////////////// Imperdibles //////////////////////////////////////////////////////////////////////////// -->
 					<div class="tab-pane imperdibles margin" id="lC">
 						<script type="text/javascript">
+							
+							var last_current3 = 1;
+							
 						    $(window).load(function() {
 						    // The slider being synced must be initialized first
 						        $('#carousel-imperdibles').flexslider({
@@ -579,34 +571,43 @@
 						        controlNav: false,
 						        animationLoop: false,
 						        slideshow: false,
-						        sync: "#carousel-imperdibles"
+						        sync: "#carousel-imperdibles",
+						        after: function(slider) {
+						        	
+						        	var current = slider.currentSlide + 1;
+							       
+							        $("#carousel-imperdibles .tab" + last_current3).removeClass("flex-active-slide");
+							        $("#carousel-imperdibles .tab" + current).addClass("flex-active-slide");
+							        
+							        last_current3 = current;
+							       }
 						        });
 						    });
 						</script>
 
 						<div id="carousel-imperdibles" class="flexslider carousel-container">
 						    <ul class="slides">
-						        <li class="flex-active-slide">
+						        <li class="tab1 flex-active-slide">
 						            <a href="#">
 						                Bienvenue à la parisienne Paris
 						            </a>
 						        </li>
-						        <li>
+						        <li class="tab2">
 						            <a href="#">
 						                Horario Francia
 						            </a>
 						        </li>
-						        <li>
+						        <li class="tab3">
 						            <a href="#">
 						                Alimentación
 						            </a>
 						        </li>
-						        <li>
+						        <li class="tab4">
 						            <a href="#">
 						                Clima
 						            </a>
 						        </li>
-						        <li>
+						        <li class="tab5">
 						            <a href="#">
 						                Tu Vestuario
 						            </a>
@@ -676,6 +677,9 @@
 <!-- ////////////// Revitalift //////////////////////////////////////////////////////////////////////////// -->
 					<div class="tab-pane revitalift margin" id="lD">
 						<script type="text/javascript">
+						
+							var last_current2 = 1;
+							
 						    $(window).load(function() {
 						    // The slider being synced must be initialized first
 						        $('#carousel-revitalift').flexslider({
@@ -692,7 +696,16 @@
 						        controlNav: false,
 						        animationLoop: false,
 						        slideshow: false,
-						        sync: "#carousel-revitalift"
+						        sync: "#carousel-revitalift",
+						        after: function(slider) {
+						        	
+						        	var current = slider.currentSlide + 1;
+							       
+							        $("#carousel-revitalift .tab" + last_current2).removeClass("flex-active-slide");
+							        $("#carousel-revitalift .tab" + current).addClass("flex-active-slide");
+							        
+							        last_current2 = current;
+							       }
 						        });
 						    });
 						</script>
@@ -951,6 +964,10 @@ seguridad.</p>
 <!-- ////////////// Expertos //////////////////////////////////////////////////////////////////////////// -->
 					<div class="tab-pane expertos margin" id="lE">
 						<script type="text/javascript">
+							
+							var last_current4 = 1;
+							
+							
 						    $(window).load(function() {
 						    // The slider being synced must be initialized first
 						        $('#carousel-expertos').flexslider({
@@ -967,23 +984,32 @@ seguridad.</p>
 						        controlNav: false,
 						        animationLoop: false,
 						        slideshow: false,
-						        sync: "#carousel-expertos"
+						        sync: "#carousel-expertos",
+						        after: function(slider) {
+						        	
+						        	var current = slider.currentSlide + 1;
+							       
+							        $("#carousel-expertos .tab" + last_current4).removeClass("flex-active-slide");
+							        $("#carousel-expertos .tab" + current).addClass("flex-active-slide");
+							        
+							        last_current4 = current;
+							       }
 						        });
 						    });
 						</script>
 						<div id="carousel-expertos" class="flexslider carousel-container">
 						    <ul class="slides">
-						        <li class="flex-active-slide">
+						        <li class="tab1 flex-active-slide">
 						            <a href="#">
 						                <img src="img/sophie-poulain.jpg" title="Sophie Poulain">
 						            </a>
 						        </li>
-						        <li class="">
+						        <li class="tab2">
 						            <a href="#">
 						                <img src="img/sophie-poulain.jpg" title="Sophie Poulain">
 						            </a>
 						        </li>
-						        <li class="">
+						        <li class="tab3">
 						            <a href="#">
 						                <img src="img/sophie-poulain.jpg" title="Sophie Poulain">
 						            </a>
@@ -1033,6 +1059,9 @@ seguridad.</p>
 <!-- ////////////// Videos //////////////////////////////////////////////////////////////////////////// -->
 					<div class="tab-pane videos" id="lF">
 						<script type="text/javascript" charset="utf-8">
+						
+							var last_current5 = 1;
+							
 						    $(window).load(function() {
 						    // The slider being synced must be initialized first
 						        $('#video-carousel').flexslider({
@@ -1050,15 +1079,24 @@ seguridad.</p>
 						        animationLoop: false,
 						        slideshow: false,
 						        sync: "#video-carousel",
+						        after: function(slider) {
+						        	
+						        	var current = slider.currentSlide + 1;
+							       
+							        $("#video-carousel .tab" + last_current5).removeClass("flex-active-slide");
+							        $("#video-carousel .tab" + current).addClass("flex-active-slide");
+							        
+							        last_current5 = current;
+							       }
 						        });
 						    });
 						</script>
 						<div id="video-carousel" class="flexslider carousel-container">
 						    <ul class="slides">
-						        <li class="one"><h2>THUMB 1</h2></li>
-						        <li class="two"><h2>THUMB 2</h2></li>
-						        <li class="three"><h2>THUMB 3</h2></li>
-						        <li class="four"><h2>THUMB 4</h2></li>
+						        <li class="tab1"><h2>THUMB 1</h2></li>
+						        <li class="tab2"><h2>THUMB 2</h2></li>
+						        <li class="tab3"><h2>THUMB 3</h2></li>
+						        <li class="tab4"><h2>THUMB 4</h2></li>
 						    </ul>
 						</div>
 
