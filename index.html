@@ -18,6 +18,14 @@
         <!-- FlexSlider -->
 		<script src="js/vendor/jquery.flexslider.js"></script>
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        
+        <style>
+        .flex2
+        {
+	        border: 1px solid red;
+	        width: 300px;
+        }
+        </style>
 
     </head>
     <body>
@@ -54,15 +62,19 @@
 <!-- ////////////// Itinerario //////////////////////////////////////////////////////////////////////////// -->
 					<div class="tab-pane itinerario margin" id="lB">
 						<script type="text/javascript">
+						
+							var last_current = 1;
+							
 						    $(window).load(function() {
 						    // The slider being synced must be initialized first
 						        $('#carousel-itinerario').flexslider({
-						        animation: "slide",
-						        controlNav: false,
-						        animationLoop: false,
-						        slideshow: false,
-						        itemMargin: 5,
-						        asNavFor: '#slider-itinerario'
+						       		animation: "slide",
+						       		controlNav: false,
+						       		animationLoop: false,
+						       		slideshow: false,
+						       		itemMargin: 5,
+						       		asNavFor: '#slider-itinerario'
+						       		
 						        });
 
 						        $('#slider-itinerario').flexslider({
@@ -70,14 +82,27 @@
 						        controlNav: false,
 						        animationLoop: false,
 						        slideshow: false,
-						        sync: "#carousel-itinerario"
+						        sync: "#carousel-itinerario",
+						        before: function(slider) {
+						        	
+						        	var current = slider.currentSlide + 1;
+							       
+							        $(".dia" + last_current).removeClass("flex2");
+							        $(".dia" + current).addClass("flex2");
+							        
+							        last_current = current;
+							        
+							       
+							       
+							        
+							       }
 						        });
 						    });
 						</script>
 
 						<div id="carousel-itinerario" class="flexslider carousel-container">
 						    <ul class="slides">
-						        <li class="dia1 flex-active-slide"><a href="#"><h1>13</h1><span>sábado</span></a></li>
+						        <li class="dia1 flex2"><a href="#"><h1>13</h1><span>sábado</span></a></li>
 						        <li class="dia2"><a href="#"><h1>14</h1><span>domingo</span></a></li>
 						        <li class="dia3"><a href="#"><h1>15</h1><span>lunes</span></a></li>
 						        <li class="dia4"><a href="#"><h1>16</h1><span>martes</span></a></li>
