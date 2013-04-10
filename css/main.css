@@ -107,13 +107,17 @@ aside { float: left; width: 150px; height: 552px; background: url(../img/sidebar
 
 .tab-pane.margin .slider-container, .tab-pane.margin .carousel-container { padding-left:44px; width:830px; }
 
-	.tab-pane.home {}
+	.tab-pane.home-b {
+	  overflow: scroll;
+	  height: 100%;
+	}
 	.tab-pane.itinerario {}
 	.tab-pane.imperdibles {}
 	.tab-pane.revitalift { background: #000; }
 	.tab-pane.expertos {  }
 	.tab-pane.videos {  }
 
+	.tab-pane.home a { position:absolute; bottom:10%; right:50px; }
 
 /* =========  FLEXSLIDER - TABS NAV ======== */
 
@@ -134,7 +138,7 @@ aside { float: left; width: 150px; height: 552px; background: url(../img/sidebar
 		.carousel-container ul.slides li a { display: block; width: 100%; height: 100%; }
 
 	.flex-direction-nav a { }
-	
+	.flexslider .slides img { width:auto; }
 	
 	
 
@@ -191,7 +195,7 @@ ul.calendario { padding: 0 50px; margin: 0 0 60px; }
 /* =========  TABS SUB NAV ======== */
 
 .tabbable.revitalift { position: absolute; overflow: scroll; width: 100%;}
-	.revitalift .nav-tabs { border: 0; position: absolute; top: 10px; left: 20px; z-index: 100; }
+	.revitalift .nav-tabs { border: 0; position: absolute; top: 10px; left:50px; z-index: 100; }
 		.revitalift .nav-tabs li { margin: 0 3px;}	
 		.revitalift .nav-tabs li a {
 			font: bold 1.2em/32px 'Droid Sans';
@@ -212,7 +216,7 @@ ul.calendario { padding: 0 50px; margin: 0 0 60px; }
 		.revitalift .nav-tabs li.active { }	
 			.revitalift .nav-tabs li.active a { background: #be0000 url(../img/sub-nav-on.png) 0 0 repeat; color: #fff; }	
 
-.tabbable.revitalift .tab-content { padding-top: 55px; }
+.tabbable.revitalift .tab-content { padding-top: 50px; }
 
 
 .nav-tabs > li > a:hover,
@@ -226,9 +230,10 @@ ul.calendario { padding: 0 50px; margin: 0 0 60px; }
 
 /* =========  REVITALIFT x3 ======== */
 
-#slider-revitalift { background:url(../img/revitalift-bg.png) no-repeat center; background-size:cover; }
+#slider-revitalift { background:url(../img/revitalift-bg.png) no-repeat center; background-size:cover; padding-left: 30px;}
 
 #inicio2 { overflow:hidden; /*background: url(../img/slides/entrevista-1.jpg) no-repeat top right fixed;*/ }
+#carousel-revitalift { padding-left:30px; }
 #carousel-revitalift ul.slides {}
 #carousel-revitalift ul.slides li { 
 	width:140px !important; height:40px; padding-top:85px; margin:0 10px; 
@@ -248,12 +253,16 @@ ul.calendario { padding: 0 50px; margin: 0 0 60px; }
 #carousel-revitalift ul.slides li.flex-active-slide { background-color:rgba(255, 255, 255, 0.1); }	
 	#carousel-revitalift ul.slides li.flex-active-slide a { color:#d50008; }
 
+#slider-revitalift .flex-viewport { margin-left:-30px; } 
 .texto.pull-right, .texto.pull-left { max-width:55%; }
 .slides img.entrevista { position: absolute; left: 528px; top: 0px; width: 302px; z-index: 9999;}
 
 img.pull-left { max-width:40%; }
 
 .clearfix { clear:left; }
+
+div#estudio3 { overflow:visible; }
+div#estudio3 > img { margin-top:-50px; }
 
 /* =========  Expertos ======== */
 #carousel-expertos .flex-viewport { width:440px; margin-left:190px; }
@@ -271,7 +280,9 @@ img.pull-left { max-width:40%; }
 #slider-expertos ul.slides li div.info { padding: 40px 140px 60px 120px; }
 	#slider-expertos ul.slides li h2 { font-size:2.333em; }
 		#slider-expertos ul.slides li h2 span { display:block; font-weight:700; }
-	#slider-expertos ul.slides li h3 { }
+	#slider-expertos ul.slides li h3 {
+    text-transform: uppercase;
+ }
 	#slider-expertos ul.slides li a.twitter { }
 	#slider-expertos ul.slides li a.vinculo { }
 
@@ -280,16 +291,16 @@ img.pull-left { max-width:40%; }
 #video-carousel { height:106px; }
 #video-carousel .flex-viewport { margin-left:200px; width:410px; }
 #video-carousel ul.slides li { 
-	opacity:.77;
 	width:100px !important; height:100px; background:#000; border:3px solid rgba(255, 255, 255, 0.77); margin:0 15px; 
 }
-#video-carousel ul.slides li h2 { font-size:15px; }
-#video-carousel ul.slides li.tab1 { background:url(../img/video_01_tab.png) no-repeat bottom; }
-#video-carousel ul.slides li.tab2 { background:url(../img/video_02_tab.png) no-repeat bottom; }
-#video-carousel ul.slides li.tab3 { background:url(../img/video_03_tab.png) no-repeat bottom; }
+#video-carousel ul.slides li h2 { text-shadow:1px 1px 2px rgba(0, 0, 0, 0.66); font-size:15px; position:relative; z-index:1; font-weight:700; }
+#video-carousel ul.slides li img { position:absolute; z-index:0; opacity:.44; }
+#video-carousel ul.slides li.tab1 h2 { margin-top:30px; }
+#video-carousel ul.slides li.tab2 h2 { margin-top:10px; }
+#video-carousel ul.slides li.tab3 h2 { margin-top:10px; }
 
-#video-carousel ul.slides li.flex-active-slide { border-color:#fff; opacity:1; }	
-	#video-carousel ul.slides li.tab1.flex-active-slide{ background-position: bottom; }
+#video-carousel ul.slides li.flex-active-slide { border-color:#fff; }
+	#video-carousel ul.slides li.flex-active-slide img { opacity:1; }
 
 #video-slider .flex-viewport { width:700px; margin-left:70px; }
 
