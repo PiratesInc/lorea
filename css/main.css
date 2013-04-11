@@ -199,6 +199,13 @@ ul.calendario { padding: 0 50px; margin: 0 0 60px; }
 #carousel-imperdibles ul.slides li.flex-active-slide { background:#FFF;  }	
 	#carousel-imperdibles ul.slides li.flex-active-slide a { color:#444; }
 
+div.imperdible { padding: 50px 140px 50px 50px; }
+h2.script { font-family:'Handscript-2'; margin:17px 0; font-size:2em; }
+
+dl dt, dl dd { display:inline; }
+dl dt { clear:left; }
+dl dd { margin-left: 2px; display: inline-block;}
+p + h3 { margin-top:19px; }
 
 /* =========  TABS SUB NAV ======== */
 
@@ -244,8 +251,10 @@ ul.calendario { padding: 0 50px; margin: 0 0 60px; }
 #carousel-revitalift { padding-left:30px; }
 #carousel-revitalift ul.slides {}
 #carousel-revitalift ul.slides li { 
-	width:140px !important; height:40px; padding-top:85px; margin:0 10px; 
-	background-position:top center;
+	width:140px !important; 
+	height:35px; 
+	padding-top: 90px; margin:0 10px; 
+	background-position:center top;
 	background-repeat: no-repeat;
 }
 	#carousel-revitalift ul.slides li a { color:#fff; }
@@ -258,7 +267,7 @@ ul.calendario { padding: 0 50px; margin: 0 0 60px; }
 #carousel-revitalift ul.slides li.tab4 { background-image:url(../img/revitalift-tab4.png); }
 #carousel-revitalift ul.slides li.tab5 { background-image:url(../img/revitalift-tab5.png); }
 
-#carousel-revitalift ul.slides li.flex-active-slide { background-color:rgba(255, 255, 255, 0.1); }	
+#carousel-revitalift ul.slides li.flex-active-slide {  }	
 	#carousel-revitalift ul.slides li.flex-active-slide a { color:#d50008; }
 
 #slider-revitalift .flex-viewport { margin-left:-30px; } 
