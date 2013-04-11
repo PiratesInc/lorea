@@ -30,12 +30,12 @@
 				<!-- sidebar con menu, clima, cambio, etc -->
 				<aside class="nav-tabs">
 					<ul>
-						<li class="logo"><a class="brand" href="#lA" data-toggle="tab">Loreal Voyage</a></li>
-						<li class="menu"><a href="#lB" data-toggle="tab">Itinerario</a></li>
-						<li class="menu"><a href="#lC" data-toggle="tab">Imperdibles</a></li>
-						<li class="menu"><a href="#lD" data-toggle="tab">Revitalift Láser X3</a></li>
-						<li class="menu"><a href="#lE" data-toggle="tab">Expertos</a></li>
-						<li class="menu"><a href="#lF" data-toggle="tab">Videos</a></li>
+						<li class="logo" onclick="video.hideVideo();"><a class="brand" href="#lA" data-toggle="tab">Loreal Voyage</a></li>
+						<li class="menu" onclick="video.hideVideo();"><a href="#lB" data-toggle="tab">Itinerario</a></li>
+						<li class="menu" onclick="video.hideVideo();"><a href="#lC" data-toggle="tab">Imperdibles</a></li>
+						<li class="menu" onclick="video.hideVideo();"><a href="#lD" data-toggle="tab">Revitalift Láser X3</a></li>
+						<li class="menu" onclick="video.hideVideo();"><a href="#lE" data-toggle="tab">Expertos</a></li>
+						<li class="menu" onclick="video.showVideo();"><a href="#lF" data-toggle="tab">Videos</a></li>
 					</ul>
 					<div class="accion clima">
 						<a class="ver-clima" href="#modal-clima" role="button"data-toggle="modal" title="Ver Clima">Ver Clima</a>
@@ -818,9 +818,9 @@
 						    // The slider being synced must be initialized first
 						        $('#carousel-imperdibles').flexslider({
 						        animation: "slide",
-						        controlNav: true,
+						        controlNav: false,
 						        animationLoop: false,
-						        slideshow: true,
+						        slideshow: false,
 						        itemMargin: 5,
 						        asNavFor: '#slider-imperdibles'
 						        });
@@ -868,32 +868,7 @@
 						        </li>
 						        <li class="tab5">
 						            <a href="#">
-						                Tips Vestuario
-						            </a>
-						        </li>
-						        <li class="tab6">
-						            <a href="#">
-						                Tips Calzado
-						            </a>
-						        </li>
-						        <li class="tab7">
-						            <a href="#">
-						                Idioma
-						            </a>
-						        </li>
-						        <li class="tab8">
-						            <a href="#">
-						                Información Paris
-						            </a>
-						        </li>
-						        <li class="tab9">
-						            <a href="#">
-						                Teléfonos de contacto
-						            </a>
-						        </li>
-						        <li class="tab10">
-						            <a href="#">
-						                Transporte
+						                Tu Vestuario
 						            </a>
 						        </li>
 						    </ul>
@@ -947,56 +922,6 @@
 						    <li>
 						    	<div class="imperdible">
 						    		<h2>Tu vestuario</h2>
-									<p>En todos los barrios hay mercaditos callejeros donde se consiguen alimentos frescos, no necesariamente baratos, y donde también hay cafés, brasseries y bistros.</p>
-									<p>Otra gran opción son los supermercados que tienen versiones mini por todos lados. Los más comunes son Monoprix y Carrefour Market. Además todas las grandes tiendas como Lafayette, Printemps o Bon Marché tienen enormes secciones dedicadas a los alimentos.</p>
-									<p>La gran tentación son las boulangeries y patisseries donde venden las típicas baguettes y delicias como los croissant o el pain au raisins. Los típicos crepes que venden en la calle y las especialidades del barrio latino: el falafel y el shawarna.</p>
-						    	</div>
-						    </li>
-
-						    <!-- imperdible 6 -->
-						    <li>
-						    	<div class="imperdible">
-						    		<h2>Tips Calzado</h2>
-									<p>En todos los barrios hay mercaditos callejeros donde se consiguen alimentos frescos, no necesariamente baratos, y donde también hay cafés, brasseries y bistros.</p>
-									<p>Otra gran opción son los supermercados que tienen versiones mini por todos lados. Los más comunes son Monoprix y Carrefour Market. Además todas las grandes tiendas como Lafayette, Printemps o Bon Marché tienen enormes secciones dedicadas a los alimentos.</p>
-									<p>La gran tentación son las boulangeries y patisseries donde venden las típicas baguettes y delicias como los croissant o el pain au raisins. Los típicos crepes que venden en la calle y las especialidades del barrio latino: el falafel y el shawarna.</p>
-						    	</div>
-						    </li>
-
-						    <!-- imperdible 7 -->
-						    <li>
-						    	<div class="imperdible">
-						    		<h2>Idioma</h2>
-									<p>En todos los barrios hay mercaditos callejeros donde se consiguen alimentos frescos, no necesariamente baratos, y donde también hay cafés, brasseries y bistros.</p>
-									<p>Otra gran opción son los supermercados que tienen versiones mini por todos lados. Los más comunes son Monoprix y Carrefour Market. Además todas las grandes tiendas como Lafayette, Printemps o Bon Marché tienen enormes secciones dedicadas a los alimentos.</p>
-									<p>La gran tentación son las boulangeries y patisseries donde venden las típicas baguettes y delicias como los croissant o el pain au raisins. Los típicos crepes que venden en la calle y las especialidades del barrio latino: el falafel y el shawarna.</p>
-						    	</div>
-						    </li>
-
-						    <!-- imperdible 8 -->
-						    <li>
-						    	<div class="imperdible">
-						    		<h2>Informacion PAris</h2>
-									<p>En todos los barrios hay mercaditos callejeros donde se consiguen alimentos frescos, no necesariamente baratos, y donde también hay cafés, brasseries y bistros.</p>
-									<p>Otra gran opción son los supermercados que tienen versiones mini por todos lados. Los más comunes son Monoprix y Carrefour Market. Además todas las grandes tiendas como Lafayette, Printemps o Bon Marché tienen enormes secciones dedicadas a los alimentos.</p>
-									<p>La gran tentación son las boulangeries y patisseries donde venden las típicas baguettes y delicias como los croissant o el pain au raisins. Los típicos crepes que venden en la calle y las especialidades del barrio latino: el falafel y el shawarna.</p>
-						    	</div>
-						    </li>
-
-						    <!-- imperdible 9 -->
-						    <li>
-						    	<div class="imperdible">
-						    		<h2>Telefonos contacto</h2>
-									<p>En todos los barrios hay mercaditos callejeros donde se consiguen alimentos frescos, no necesariamente baratos, y donde también hay cafés, brasseries y bistros.</p>
-									<p>Otra gran opción son los supermercados que tienen versiones mini por todos lados. Los más comunes son Monoprix y Carrefour Market. Además todas las grandes tiendas como Lafayette, Printemps o Bon Marché tienen enormes secciones dedicadas a los alimentos.</p>
-									<p>La gran tentación son las boulangeries y patisseries donde venden las típicas baguettes y delicias como los croissant o el pain au raisins. Los típicos crepes que venden en la calle y las especialidades del barrio latino: el falafel y el shawarna.</p>
-						    	</div>
-						    </li>
-
-						    <!-- imperdible 10 -->
-						    <li>
-						    	<div class="imperdible">
-						    		<h2>Transporte</h2>
 									<p>En todos los barrios hay mercaditos callejeros donde se consiguen alimentos frescos, no necesariamente baratos, y donde también hay cafés, brasseries y bistros.</p>
 									<p>Otra gran opción son los supermercados que tienen versiones mini por todos lados. Los más comunes son Monoprix y Carrefour Market. Además todas las grandes tiendas como Lafayette, Printemps o Bon Marché tienen enormes secciones dedicadas a los alimentos.</p>
 									<p>La gran tentación son las boulangeries y patisseries donde venden las típicas baguettes y delicias como los croissant o el pain au raisins. Los típicos crepes que venden en la calle y las especialidades del barrio latino: el falafel y el shawarna.</p>
@@ -1466,9 +1391,11 @@
 						</script>
 						<div id="video-carousel" class="flexslider carousel-container">
 						    <ul class="slides">
+						    	<!--
 						        <li class="tab1"><img src="img/video_01_tab.png"><h2><strong>Tecnología</strong> RVT Laser x3</h2></li> 
 						        <li class="tab2"><img src="img/video_02_tab.png"><h2>Spot internacional <strong>Revitalift</strong> Laser x3</h2></li>
 						        <li class="tab3"><img src="img/video_03_tab.png"><h2>Resultados <strong>estudio</strong> comparativo RVT Laser x3</h2></li>
+						        -->
 						    </ul>
 						</div>
 
@@ -1477,25 +1404,18 @@
 							
 						    <li>
 						    	<div class="video-wrapper">
-							    	<video controls tabindex="0" width="665" height="330">
-										<source src="videos/01_laser_x3.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-										
-									</video>
+							    	
 								
 								</div>
 							</li>
 						    <li>
 						    	<div class="video-wrapper">
-							    	<video controls tabindex="0" width="665" height="330">
-										<source src="videos/02_spot_revitalift.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-									</video>
+							    	
 								</div>
 							</li>
 							<li>
 						    	<div class="video-wrapper">
-							    	<video controls tabindex="0" width="665" height="330">
-										<source src="videos/03_resultados_estudio.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-									</video>
+							    	
 								</div>
 							</li>
 						    <!-- items mirrored twice, total of 12 -->
